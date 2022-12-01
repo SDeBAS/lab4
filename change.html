@@ -4,34 +4,30 @@
     <link rel="stylesheet" href="./domparser.css" type="text/css"/>
 </head>
 <body>
-    <div class="contain">
-        <h1>DOM PARSER CONCEPTS</h1>
+     <h1>DOM PARSER</h1>
         <br/>
-        <div class="box">
+    <div class="contain">
+       
+        <div class="boxmain">
             <h1>Edit Nodes </h1>
             <p id="demo1"></p>
-            <span>Edited Value : </span>
+            <span>Edited Value : </span><br>
             <span id="demo2"></span>
         </div>
         
-        <div class="box1">
+        <div class="boxmain">
             <h1>Remove Nodes</h1>
             <p id="demo3"></p>
         </div>
-        <div class="box2">
+        <div class="boxmain">
             <h1>Traverse Nodes</h1>
             <p id="demo4"></p>
         </div>
-        <div class="box3">
+        <div class="boxmain">
             <h1>Added Nodes</h1>
             <p id="demo5"></p>
         </div>
     </div>
-    <footer style="text-align: center; padding : 1rem;">
-        <h5>&copy; Darpan Deb</h5>
-    </footer>
-
-
 
 <script>
 var xhttp = new XMLHttpRequest();
@@ -51,7 +47,7 @@ function myFunction(xml) {
     var x;
     x = xmlDoc.getElementsByTagName("name")[0].childNodes[0];
     document.getElementById("demo1").innerHTML = x.nodeValue;
-    x.nodeValue = "Agr";
+    x.nodeValue = "Debanjan Basu";
     x = xmlDoc.getElementsByTagName("name")[0].childNodes[0];
     document.getElementById("demo2").innerHTML = x.nodeValue;
 }
@@ -61,7 +57,7 @@ function myFunction1(xml) {
     var currNode = root.childNodes[1];
     removedNode = currNode.removeChild(currNode.childNodes[1]);
     document.getElementById("demo3").innerHTML =
-    "Removed node tag : < " + removedNode.nodeName + " > ";
+    "Removed node tag :<br/> < " + removedNode.nodeName + " > ";
 }
 function myFunction2(xml) {
     var x, i, xmlDoc, txt;
@@ -82,21 +78,20 @@ function myFunction3(xml) {
     var x, y, z, i, xLen, yLen, newEle, newText, xmlDoc, txt;
     xmlDoc = xml.responseXML;
     txt = "";
-    x = xmlDoc.getElementsByTagName("student");
+    x = xmlDoc.getElementsByTagName("post");
     xLen = x.length;
     for (i = 0; i < xLen; i++) { 
-        newEle = xmlDoc.createElement("class");
-        newText = xmlDoc.createTextNode("2 MCA B");
+        newEle = xmlDoc.createElement("name");
+        newText = xmlDoc.createTextNode("Sagnik");
         newEle.appendChild(newText);
         x[i].appendChild(newEle);
     }
-    y = xmlDoc.getElementsByTagName("name");
+
+    y = xmlDoc.getElementsByTagName("post");
     yLen = y.length
-    z = xmlDoc.getElementsByTagName("class");
-    for (i = 0; i < yLen; i++) { 
-        txt += y[i].childNodes[0].nodeValue + 
-        " - Class : " + 
-        z[i].childNodes[0].nodeValue + "<br>";
+    z = xmlDoc.getElementsByTagName("name");
+    for (i = 0; i < yLen-1; i++) { 
+        txt += " New Node Name :<br/> " +  z[i].childNodes[0].nodeValue + "<br>";
     }
     document.getElementById("demo5").innerHTML = txt;
 }
