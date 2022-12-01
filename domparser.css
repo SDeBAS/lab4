@@ -1,57 +1,47 @@
-.box
-{
-    text-align: center;
-    width: fit-content;
-    margin-left: 2rem;
-    background-color: rgb(232, 243, 17);
-    border: 1px solid grey;
-    box-shadow: 3px 4px 6px rgb(35, 40, 28);
-    padding: 4rem;
-   
-}
-.box1
-{
-    text-align: center;
-    width: fit-content;
-    margin-left: 2rem;
-    background-color: rgb(235, 0, 0);
-    color: white;
-    border: 1px solid grey;
-    box-shadow: 3px 4px 6px rgb(35, 40, 28);
-    padding: 4rem;
-}
-.box2
-{
-    text-align: center;
-    width: fit-content;
-    margin-left: 2rem;
-    background-color: rgb(39, 52, 235);
-    color: white;
-    border: 1px solid grey;
-    box-shadow: 3px 4px 6px rgb(35, 40, 28);
-    padding: 4rem;
-}
-.box3
-{
-    text-align: center;
-    width: fit-content;
-    margin-left: 2rem;
-    background-color: rgb(3, 133, 44);
-    color: white;
-    border: 1px solid grey;
-    box-shadow: 3px 4px 6px rgb(35, 40, 28);
-    padding: 4rem;
-}
-.contain
-{
-    text-align: center;
-    width: fit-content;
-    display: flex; 
-    background-color: blanchedalmond;
-    padding: 2rem;
-}
 *
 {
     margin: 0;
     padding: 0;
+}
+
+body
+{
+     background-color: #1a1a1d;
+     color: #fff;
+     font-family: "Montserrat";
+}
+
+body h1
+{
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.contain
+{
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.boxmain
+{
+    width: 220px;
+    height: 220px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #1a1a1d;
+   margin-bottom: 2rem;
+   margin-top: 2rem;
+   margin-left: 3.2rem;
+}
+.boxmain p
+{
+    margin-top: 1rem;
+
 }
