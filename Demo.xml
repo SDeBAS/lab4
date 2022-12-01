@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<course>
-    <student>
-         <name>Kumar</name>
-         <reg>2247213</reg>
-         <email>Kumar.deb@gmail.com</email>
-    </student>
-    <student>
-        <name>Rajarshi</name>
-        <reg>2247229</reg>
-        <email>rajarshi.bar@gmail.com</email>
-    </student>
-    <student>
+<Profile_Details>
+    <post>
         <name>Debanjan</name>
         <reg>2247214</reg>
-        <email>debanjan.bas@gmail.com</email>
-    </student>
-    <student>
-        <name>Nandini</name>
-        <reg>2457901</reg>
-        <email>nandini.chak@gmail.com</email>
-    </student>
-</course>
+        <date>2022-11-30</date>
+    </post>
+
+    
+
+    <post>
+        <name>Ayushya</name>
+        <reg>2247146</reg>
+        <date>2022-11-10</date>
+    </post>
+        
+
+    
+</Profile_Details>
